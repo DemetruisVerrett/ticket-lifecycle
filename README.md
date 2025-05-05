@@ -5,11 +5,18 @@
 <h1>osTicket - Ticket Lifecycle: Intake Through Resolution</h1>
 This tutorial outlines the lifecycle of a ticket from intake to resolution within the open-source help desk ticketing system osTicket.<br />
 
+
+<h2>Video Demonstration</h2>
+
+- ### [YouTube/ClipChamp: How to create, work, and resolves tickets within osTicket Part1](https://youtu.be/quaTA4miodY?si=Q5tutyDnG6ZbRjpb)
+- ### [YouTube/ClipChamp: How to create, work, and resolves tickets within osTicket Part2](https://youtu.be/ZmIyx3G1ufA?si=kPHdN2msppaDN8QR)
+
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Internet Information Services (IIS)
+- osTicket System
 
 <h2>Operating Systems Used </h2>
 
@@ -17,50 +24,90 @@ This tutorial outlines the lifecycle of a ticket from intake to resolution withi
 
 <h2>Ticket Lifecycle Stages</h2>
 
-- Intake
-- Assignment and Communication
+- End-User Intake
+- Help Desk Agent Assignment and Communication
 - Working the Issue
 - Resolution
 
 <h2>Lifecycle Stages</h2>
 
 <p>
-<img src="" height="80%" width="80%"/>
-</p>
+  
+![Image](https://github.com/user-attachments/assets/c54fe6c9-2440-4fba-8822-1b83b9381a94)
 
+</p>
 <p>
-Rachel, one of our users, opens a new ticket under the Business Critical Outage help topic. The issue reported is that the CRM software is down. 
+1. Login and Overview:
+  
+Admin/Analyst Login Page: http://localhost/osTicket/scp/login.php
+
+End Users osTicket URL: http://localhost/osTicket
+  
+2. Admin Actions:
+Change the SysAdmins Department:
+Convert the SysAdmins department to a Top-Level Department.
+Delete the Maintenance Department:
+Permanently delete (not archive) the Maintenance Department.
+  
+3. End-User Actions:
+Create a Ticket (End-User):
+Issue: "Entire mobile/online banking system is down."
+  
+4. Help Desk Agent (john) Actions:
+Observe Ticket Properties: After the ticket is created by the end user, as john (Help Desk Agent), you will observe the following ticket properties:
+Priority
+Department
+SLA (Service Level Agreement)
+Assigned To
+Set Ticket Properties:
+Priority: Sev-A (1 hour, 24/7)
+Department: Online Banking Department
+  
+5. Attempt to Re-Observe Ticket:
+After setting the properties, try to observe or modify the ticket again as john. Check if you are able to view or change the ticket after altering its properties.
+  
+6. Resolve Ticket as "jane":
+Work on the ticket and resolve it to completion as jane.
+  
+This lab involves creating tickets, modifying their properties as a help desk agent, and resolving the issues by changing ticket statuses, priorities, and departments. It also includes administering certain backend tasks like adjusting department settings and deleting departments in the system.
 </p>
 <br />
 
 <p>
-<img src="" height="80%" width="80%"/>
+  
+![Image](https://github.com/user-attachments/assets/1aeae9bd-858c-4b9f-b4cf-0fa7182803da)
+
 </p>
 <p>
-Agents view live tickets in the Agent Panel. Queue managers will assign priority tickets to the appropriate agent(s) and ensure proper Service Level Agreements (SLAs) are applied. 
+Ticket 2: Accounting Department Needs Adobe Upgrade
+
+End-user Action: Reported that Adobe software in the accounting department is broken and needs an upgrade.
+
+Help Desk Agent (John) Action: Observed the ticket's properties, including priority (Sev-B), department (Support), and SLA (4 hours, 24/7).
+
+Ticket Update: John worked on the ticket, performing the necessary upgrade to Adobe software.
+
+Resolution: The issue was resolved successfully by John.
+
+<p>
+  
+![Image](https://github.com/user-attachments/assets/cd3febaa-efa2-43bd-948b-f48e4dbd4952)
+
+</p>
+
+Ticket 3: CFO’s Laptop Will No Longer Turn On
+
+End-user Action: Reported that the CFO's laptop won't turn on.
+
+Help Desk Agent (John) Action: Observed the ticket's properties, including priority (Sev-B), department (Support), and SLA (4 hours, 24/7).
+
+Ticket Update: John worked on the ticket, troubleshooting and resolving the issue with the laptop.
+
+Resolution: The issue was successfully fixed by John.
+
+Both tickets were resolved by John within the defined SLA.
+
 </p>
 <br />
 
 <p>
-<img src="" height="80%" width="80%"/>
-</p>
-
-<p>
-<img src="" height="80%" width="80%"/>
-</p>
-<p>
-In our example, the ticket priority is set to Emergency due to its potential detrimental impact on a critical business area. The SLA plan has been updated accordingly, and the ticket is assigned to a top-level technician. In some ticketing systems, customers can set their own SLA plans.
-</p>
-<br />
-
-<p>
-<img src="" height="80%" width="80%"/>
-</p>
-
-<p>
-<img src="" height="80%" width="80%"/>
-</p>
-<p>
-The assigned agent works the issue, making sure to communicate with the user at regular intervals. For our example, the agent identified the cause of the problem as being personal networking issues on the user’s end. The status was set to Resolved and an internal note was added to inform all agents involved that the customer was upset. The message between agents emphasized handling the issue with empathy as well as urgency during follow-up communication with the user. As the issue was resolved successfully, the ticket was closed. 
-</p>
-<br />
